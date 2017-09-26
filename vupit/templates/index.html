@@ -20,21 +20,21 @@
     <br>
 
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">Fornecedores</a>
-            <a class="list-group-item list-group-item-action" href="#">Produtos</a>
-            <a class="list-group-item list-group-item-action" href="#">Pedidos</a>
-          </div>
-        </div>
-        <div class="col-md-9">
-          <div id="app">
-            <jumbotron v-bind:info="msg"></jumbotron>
-          </div>
-        </div>
+      <div class="row" id="app">
+        <div class="col-md-3"><sidebar></sidebar></div>
+        <div class="col-md-9"><information></information></div>
       </div>
     </div>
-    {% include "components/start.html" %}
+    {% include "components/content.html" %}
+    {% include "components/sidebar.html" %}
+    <script>
+      var app = new Vue({
+        el: '#app',
+        components: {
+          'sidebar': Sidebar,
+          'information': Info
+        }
+      });
+    </script>
   </body>
 </html>
