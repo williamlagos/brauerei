@@ -1,8 +1,40 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Vupit Dashboard</title>
 
-{% block content %}
-<div class="jumbotron">
-  <h1 class="display-3">Dashboard</h1>
-  <p class="lead">Aqui você consegue controlar o estoque e relação de fornecedores.</p>
-</div>
-{% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!-- JS libraries -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://vuejs.org/js/vue.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light" style="background-color: #563d7c">
+      <a class="navbar-brand" style="color:white" href="#">Vupit</a>
+    </nav>
+    <br>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group">
+            <a class="list-group-item active" href="#">Fornecedores</a>
+            <a class="list-group-item list-group-item-action" href="#">Produtos</a>
+            <a class="list-group-item list-group-item-action" href="#">Pedidos</a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div id="app">
+            <jumbotron v-bind:info="msg"></jumbotron>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include "components/start.html" %}
+  </body>
+</html>
