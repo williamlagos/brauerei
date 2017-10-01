@@ -13,8 +13,27 @@
     <link href="{% static "css/style.css" %}" rel="stylesheet">
 
     <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url("{% static "ttf/GOTHAM-MEDIUM_0.TTF" %}");
+    }
     body, html {
       height: 100% !important;
+      font-family: 'Gotham'
+    }
+    h1 {
+      margin-top:2.5em;
+      margin-bottom:2.5em;
+      font-size:2em;
+    }
+    h2 {
+      margin-top:-1em;
+      font-size:1.7em;
+    }
+    h3 {
+      margin-top:1.5em;
+      margin-bottom:1.5em;
+      font-size:1.3em;
     }
     .bg {
       /* The image used */
@@ -40,6 +59,15 @@
     }
     .purple {
       background: #5d4582;
+      color: #ffffff;
+    }
+    .yellow {
+      background: #ffda00;
+      color: #5d4582;
+    }
+    .white {
+      background: #ffffff;
+      color: #5d4582;
     }
     </style>
 
@@ -51,10 +79,88 @@
     <![endif]-->
   </head>
   <body>
-    <div class="bg">
+    <div id="cover" class="bg">
       <div class="cover">
         <div class="item">
           <img src="{% static "svg/vupit.svg" %}" width="75%" class="img-responsive"/>
+        </div>
+      </div>
+    </div>
+    <div id="howitworks" class="purple container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>COMO FUNCIONA?</h1>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img src="{% static "img/gps.png" %}" class="img-responsive"/>
+          <h3>USE O SEU GPS: <br> SELECIONE SEU <br> ENDEREÇO</h3>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static "img/mapa.png" %}" class="img-responsive"/>
+          <h3>ESCOLHA UM <br> DISTRIBUIDOR</h3>
+        </div>
+        <div class="col-md-4">
+          <img src="{% static "img/bebidas.png" %}" class="img-responsive"/>
+          <h3>RECEBA ONDE ESTIVER: <br> NA SUA CASA <br> NO CERIMONIAL <br> OU NO SEU BAR</h3>
+        </div>
+      </div>
+    </div>
+    <div id="advantage" class="yellow container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>VANTAGENS</h1>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <img src="{% static "img/dinheiro.png" %}" class="img-responsive"/>
+          <h3>ECONOMIA</h3>
+          <p>Escolha a distribuidora <br>com menor preço <br>mais perto de você.</p>
+        </div>
+        <div class="col">
+          <img src="{% static "img/moto.png" %}" class="img-responsive"/>
+          <h3>PRATICIDADE</h3>
+          <p>Agilidade e eficiência <br>com um excelente <br>atendimento na entrega.</p>
+        </div>
+        <div class="col">
+          <img src="{% static "img/relogio.png" %}" class="img-responsive"/>
+          <h3>DISPONIBILIDADE</h3>
+          <p>Todos os dias <br>a qualquer hora. <br> 24 horas.</p>
+        </div>
+        <div class="col">
+          <img src="{% static "img/celular.png" %}" class="img-responsive"/>
+          <h3>MOBILIDADE</h3>
+          <p>Peça onde você estiver <br>e receba em qualquer <br>lugar que desejar.</p>
+        </div>
+        <div class="col">
+          <img src="{% static "img/seguranca.png" %}" class="img-responsive"/>
+          <h3>SEGURANÇA</h3>
+          <p>Respeito total <br>a sua privacidade <br>e seus dados.</p>
+        </div>
+      </div>
+      <br><br>
+    </div>
+    <div id="distribute" class="purple container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Cadastre sua<br>DISTRIBUIDORA</h1>
+          <h2>Em breve.</h2>
+        </div>
+      </div>
+    </div>
+    <div id="contact" style="display: none;" class="white container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>CONTATO</h1>
+        </div>
+      </div>
+    </div>
+    <div id="footer" class="purple container-fluid">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p>Vupit 2017</p>
         </div>
       </div>
     </div>
