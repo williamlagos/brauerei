@@ -35,6 +35,9 @@
       margin-bottom:1.5em;
       font-size:1.3em;
     }
+    label {
+      margin-top:1em;
+    }
     .bg {
       /* The image used */
       background-image: url("{% static "img/friends.jpg" %}");
@@ -69,6 +72,34 @@
       background: #ffffff;
       color: #5d4582;
     }
+    .btn-vupit, .btn-vupit:hover {
+      padding:.5em 1em;
+      margin-top:2em;
+      margin-bottom:2em;
+      border: 4px solid #ffda00;
+      border-radius: 0px;
+      background: #5d4582;
+      color: #ffda00;
+      font-size:1.5em;
+    }
+    .btn-vupit-inverse, .btn-vupit-inverse:hover {
+      padding:.5em 1em;
+      margin-top:2em;
+      margin-bottom:2em;
+      border: 4px solid #5d4582;
+      border-radius: 0px;
+      background: #ffffff;
+      color: #5d4582;
+      font-size:1.5em;
+    }
+    .vupit-form-control, .vupit-form-control:hover {
+      width:100%;
+      border: 4px solid #5d4582;
+      border-radius: 0px;
+      background: #ffffff;
+      color: #5d4582;
+      font-size:1.5em;
+    }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -82,7 +113,7 @@
     <div id="cover" class="bg">
       <div class="cover">
         <div class="item">
-          <img src="{% static "svg/vupit.svg" %}" width="75%" class="img-responsive"/>
+          <img src="{% static "svg/vupit.svg" %}" width="75%" class="img-fluid"/>
         </div>
       </div>
     </div>
@@ -92,18 +123,20 @@
           <h1>COMO FUNCIONA?</h1>
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col-md-4">
-          <img src="{% static "img/gps.png" %}" class="img-responsive"/>
-          <h3>USE O SEU GPS: <br> SELECIONE SEU <br> ENDEREÇO</h3>
-        </div>
-        <div class="col-md-4">
-          <img src="{% static "img/mapa.png" %}" class="img-responsive"/>
-          <h3>ESCOLHA UM <br> DISTRIBUIDOR</h3>
-        </div>
-        <div class="col-md-4">
-          <img src="{% static "img/bebidas.png" %}" class="img-responsive"/>
-          <h3>RECEBA ONDE ESTIVER: <br> NA SUA CASA <br> NO CERIMONIAL <br> OU NO SEU BAR</h3>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <img src="{% static "img/gps.png" %}" class="img-fluid"/>
+            <h3>USE O SEU GPS: <br> SELECIONE SEU <br> ENDEREÇO</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static "img/mapa.png" %}" class="img-fluid"/>
+            <h3>ESCOLHA UM <br> DISTRIBUIDOR</h3>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static "img/bebidas.png" %}" class="img-fluid"/>
+            <h3>RECEBA ONDE ESTIVER: <br> NA SUA CASA <br> NO CERIMONIAL <br> OU NO SEU BAR</h3>
+          </div>
         </div>
       </div>
     </div>
@@ -113,31 +146,33 @@
           <h1>VANTAGENS</h1>
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col">
-          <img src="{% static "img/dinheiro.png" %}" class="img-responsive"/>
-          <h3>ECONOMIA</h3>
-          <p>Escolha a distribuidora <br>com menor preço <br>mais perto de você.</p>
-        </div>
-        <div class="col">
-          <img src="{% static "img/moto.png" %}" class="img-responsive"/>
-          <h3>PRATICIDADE</h3>
-          <p>Agilidade e eficiência <br>com um excelente <br>atendimento na entrega.</p>
-        </div>
-        <div class="col">
-          <img src="{% static "img/relogio.png" %}" class="img-responsive"/>
-          <h3>DISPONIBILIDADE</h3>
-          <p>Todos os dias <br>a qualquer hora. <br> 24 horas.</p>
-        </div>
-        <div class="col">
-          <img src="{% static "img/celular.png" %}" class="img-responsive"/>
-          <h3>MOBILIDADE</h3>
-          <p>Peça onde você estiver <br>e receba em qualquer <br>lugar que desejar.</p>
-        </div>
-        <div class="col">
-          <img src="{% static "img/seguranca.png" %}" class="img-responsive"/>
-          <h3>SEGURANÇA</h3>
-          <p>Respeito total <br>a sua privacidade <br>e seus dados.</p>
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <img src="{% static "img/dinheiro.png" %}" class="img-fluid"/>
+            <h3>ECONOMIA</h3>
+            <p>Escolha a distribuidora <br>com menor preço <br>mais perto de você.</p>
+          </div>
+          <div class="col">
+            <img src="{% static "img/moto.png" %}" class="img-fluid"/>
+            <h3>PRATICIDADE</h3>
+            <p>Agilidade e eficiência <br>com um excelente <br>atendimento na entrega.</p>
+          </div>
+          <div class="col">
+            <img src="{% static "img/relogio.png" %}" class="img-fluid"/>
+            <h3>DISPONIBILIDADE</h3>
+            <p>Todos os dias <br>a qualquer hora. <br> 24 horas.</p>
+          </div>
+          <div class="col">
+            <img src="{% static "img/celular.png" %}" class="img-fluid"/>
+            <h3>MOBILIDADE</h3>
+            <p>Peça onde você estiver <br>e receba em qualquer <br>lugar que desejar.</p>
+          </div>
+          <div class="col">
+            <img src="{% static "img/seguranca.png" %}" class="img-fluid"/>
+            <h3>SEGURANÇA</h3>
+            <p>Respeito total <br>a sua privacidade <br>e seus dados.</p>
+          </div>
         </div>
       </div>
       <br><br>
@@ -146,20 +181,76 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1>Cadastre sua<br>DISTRIBUIDORA</h1>
-          <h2>Em breve.</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-9 ml-auto mr-auto">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="{% static "img/preencha.png" %}" class="img-fluid">
+              <h3>PREENCHA <br> AS INFORMAÇÕES<br> NECESSÁRIAS</h3>
+            </div>
+            <div class="col-md-3">
+              <img src="{% static "img/contato.png" %}" class="img-fluid">
+              <h3>ENTRAREMOS <br> EM CONTATO<br> COM VOCÊ</h3>
+            </div>
+            <div class="col-md-3">
+              <img src="{% static "img/app.png" %}" class="img-fluid">
+              <h3>ATUALIZAREMOS A <br> SUA DISTRIBUIDORA<br> NO APP/USUÁRIO</h3>
+            </div>
+            <div class="col-md-3">
+              <img src="{% static "img/pedidos.png" %}" class="img-fluid">
+              <h3>JÁ PODE <br> RECEBER<br> SEUS PEDIDOS</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <button class="btn-vupit">Cadastre-se em breve.</button>
         </div>
       </div>
     </div>
-    <div id="contact" style="display: none;" class="white container-fluid">
+    <div id="contact" class="white container-fluid">
       <div class="row text-center">
         <div class="col-md-12">
           <h1>CONTATO</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 ml-auto mr-auto">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <label for="inputName1">NOME</label>
+                  <input type="name" class="form-control vupit-form-control" id="inputName1">
+                </div>
+                <div class="col">
+                  <label for="inputEmail1">E-MAIL</label>
+                  <input type="email" class="form-control vupit-form-control" id="inputEmail1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="inputMessage1">MENSAGEM</label>
+                  <textarea class="vupit-form-control" id="inputMessage1"></textarea>
+                </div>
+              </div>
+              <div class="row text-center">
+                <div class="col">
+                  <button type="submit" class="btn-vupit-inverse">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
     <div id="footer" class="purple container-fluid">
       <div class="row text-center">
         <div class="col-md-12">
+          <br>
           <p>Vupit 2017</p>
         </div>
       </div>
