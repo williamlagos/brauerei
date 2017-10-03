@@ -111,9 +111,24 @@
     .nav-link {
       color:white !important;
     }
+    .overlay {
+      background: rgba(0,0,0,0.7);
+      height:100%;
+      width:100%;
+    }
     h3 a, h3 a:hover, a:hover {
       text-decoration: none;
       color:white;
+    }
+    @media (max-width: 576px) {
+      h3 {
+        font-size:8pt;
+        line-height:12pt;
+      }
+      p {
+        font-size:7pt;
+        line-height:10pt;
+      }
     }
     </style>
 
@@ -168,7 +183,18 @@
         </div>
       </div>
     </nav>
-    <div id="cover" class="cover bg" style="margin-top:-100px"></div>
+    <div id="cover" class="cover bg" style="margin-top:-150px">
+      <div class="overlay">
+        <!-- <br><br><br><br><br><br>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h1 style="color:white; line-height:1.5em">Toda hora é <br> uma boa hora <br> para diversão.</h1>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
     <div id="howitworks" class="purple container-fluid">
       <div class="row text-center">
         <div class="col-md-12">
@@ -178,15 +204,15 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4">
-            <img src="{% static "img/gps.png" %}" class="img-fluid"/>
+            <img src="{% static "img/gps.png" %}" width="75%" class="img-fluid"/>
             <h3>USE O SEU GPS: <br> SELECIONE SEU <br> ENDEREÇO</h3>
           </div>
           <div class="col-md-4">
-            <img src="{% static "img/mapa.png" %}" class="img-fluid"/>
+            <img src="{% static "img/mapa.png" %}" width="75%" class="img-fluid"/>
             <h3>ESCOLHA UM <br> DISTRIBUIDOR</h3>
           </div>
           <div class="col-md-4">
-            <img src="{% static "img/bebidas.png" %}" class="img-fluid"/>
+            <img src="{% static "img/bebidas.png" %}" width="75%" class="img-fluid"/>
             <h3>RECEBA ONDE ESTIVER: <br> NA SUA CASA <br> NO CERIMONIAL <br> OU NO SEU BAR</h3>
           </div>
         </div>
@@ -238,19 +264,19 @@
       <div class="row text-center">
         <div class="col-md-9 ml-auto mr-auto">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <img src="{% static "img/preencha.png" %}" class="img-fluid">
               <h3>PREENCHA <br> AS INFORMAÇÕES<br> NECESSÁRIAS</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <img src="{% static "img/contato.png" %}" class="img-fluid">
               <h3>ENTRAREMOS <br> EM CONTATO<br> COM VOCÊ</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <img src="{% static "img/app.png" %}" class="img-fluid">
               <h3>ATUALIZAREMOS A <br> SUA DISTRIBUIDORA<br> NO APP/USUÁRIO</h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-6 col-md-3">
               <img src="{% static "img/pedidos.png" %}" class="img-fluid">
               <h3>JÁ PODE <br> RECEBER<br> SEUS PEDIDOS</h3>
             </div>
