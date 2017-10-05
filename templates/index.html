@@ -53,12 +53,7 @@
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .cover {
-      display:flex;
-      align-items: center;
-      height:100%;
+      background-size: auto;
     }
     .item {
       text-align: center;
@@ -106,12 +101,14 @@
       font-size:1.5em;
     }
     .navbar {
-      background-color: rgba(0,0,0,0.0);
+      background-color: rgba(0,0,0,0.7);
     }
     .nav-link {
       color:white !important;
     }
-    .overlay {
+    .cover {
+      display:flex;
+      align-items: center;
       background: rgba(0,0,0,0.7);
       height:100%;
       width:100%;
@@ -142,8 +139,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <nav class="container navbar navbar-expand-lg navbar-light sticky-top">
+  <body class="bg">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#"><img src="{% static "img/vupit.png" %}" class="img-fluid"/></a>
       <button class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -152,21 +149,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="container">
           <div class="row text-right">
-            <div class="col-md-4 ml-auto">
+            <div class="col-md-1 ml-auto">
               <div class="row">
-              <div class="col-md-3 ml-auto">
-                <a href="https://www.facebook.com/VupitApp/">
-                  <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
-                </a>
-              </div>
-              <div class="col-md-3">
-                <a href="https://www.instagram.com/">
-                  <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
-                </a>
-              </div>
+                <div class="col-md-6 p-0">
+                  <a href="https://www.facebook.com/VupitApp/">
+                    <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
+                  </a>
+                </div>
+                <div class="col-md-6 p-0">
+                  <a href="https://www.instagram.com/">
+                    <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
+          <br>
           <div class="row">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
@@ -186,16 +184,10 @@
         </div>
       </div>
     </nav>
-    <div id="cover" class="cover bg" style="margin-top:-150px">
-      <div class="overlay">
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <h1 style="color:white; line-height:1.5em">Toda hora é <br> uma boa hora <br> para diversão.</h1>
-            </div>
-          </div>
-        </div> -->
-      </div>
+    <div id="cover" class="cover text-center">
+      <!-- <div id="message" class="col-md-4" style="margin:0 auto">
+        <h1 style="color:white; line-height:1.5em">Toda hora é uma boa hora para diversão.</h1>
+      </div> -->
     </div>
     <div id="howitworks" class="purple container-fluid">
       <br>
@@ -353,27 +345,31 @@
           <h3><a href="#advantage">VANTAGENS</a></h3>
           <h3><a href="#contact">CONTATO</a></h3>
         </div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-3 text-right">
           <div class="row">
             <div class="col-md-9 ml-auto mr-auto">
-              <br><br><br>
+              <br><br><br><br><br>
               <div class="row">
-                <div class="col-md-3 p-0 ml-auto">
-                  <a href="https://www.facebook.com/VupitApp/">
-                    <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
-                  </a>
-                </div>
-                <div class="col-md-3">
-                  <a href="https://www.instagram.com/">
-                    <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
-                  </a>
+                <div class="col-md-4 ml-auto">
+                  <div class="row">
+                    <div class="col-md-6 p-0 ml-auto">
+                      <a href="https://www.facebook.com/VupitApp/">
+                        <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
+                      </a>
+                    </div>
+                    <div class="col-md-6 p-0">
+                      <a href="https://www.instagram.com/">
+                        <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <br><br><br>
               <div class="row">
                 <div class="col-md-12">
                   <br>
-                  <p>©2017 Vupit &nbsp;&nbsp;</p>
+                  <p>©2017 Vupit </p>
                 </div>
               </div>
             </div>
