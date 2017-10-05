@@ -66,10 +66,10 @@
 
     <!-- END Header -->
     {% block breadcrumbs %}
-    <div class="breadcrumbs">
-    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></li>
     {% if title %} &rsaquo; {{ title }}{% endif %}
-    </div>
+    </ol>
     {% endblock %}
     {% endif %}
 

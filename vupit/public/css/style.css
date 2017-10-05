@@ -1,3 +1,4 @@
-#user-tools {
-  color:white;
+a, a:hover {
+  text-decoration: none;
+  color: black;
 }
