@@ -40,6 +40,11 @@
       margin-bottom:1.5em;
       font-size:1.3em;
     }
+    h4 {
+      margin-top:1.5em;
+      margin-bottom:1.5em;
+      font-size:1.1em;
+    }
     label {
       margin-top:1em;
     }
@@ -53,7 +58,7 @@
       /* Center and scale the image nicely */
       background-position: center;
       background-repeat: no-repeat;
-      background-size: auto;
+      background-size: cover;
     }
     .item {
       text-align: center;
@@ -113,14 +118,17 @@
       height:100%;
       width:100%;
     }
-    h3 a, h3 a:hover, a:hover {
+    h4 a, h4 a:hover, a:hover {
       text-decoration: none;
       color:white;
     }
-    #footer h3 {
+    #footer h4 {
       margin: 1em 0em;
     }
     @media (max-width: 576px) {
+      .bg {
+        background-size:auto;
+      }
       h3 {
         font-size:8pt;
         line-height:12pt;
@@ -200,15 +208,15 @@
         <div class="row text-center">
           <div class="col-md-4">
             <img src="{% static "img/gps.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h3>USE O SEU GPS: SELECIONE SEU ENDEREÇO</h3>
+            <h4>USE O SEU GPS: SELECIONE SEU ENDEREÇO</h4>
           </div>
           <div class="col-md-4">
             <img src="{% static "img/mapa.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h3>ESCOLHA UM DISTRIBUIDOR</h3>
+            <h4>ESCOLHA UM DISTRIBUIDOR</h4>
           </div>
           <div class="col-md-4">
             <img src="{% static "img/bebidas.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h3>RECEBA ONDE ESTIVER: NA SUA CASA NO CERIMONIAL OU NO SEU BAR</h3>
+            <h4>RECEBA ONDE ESTIVER: NA SUA CASA NO CERIMONIAL OU NO SEU BAR</h4>
           </div>
         </div>
       </div>
@@ -264,19 +272,19 @@
           <div class="row">
             <div class="col-6 col-md-3">
               <img src="{% static "img/preencha.png" %}" class="img-fluid">
-              <h3>PREENCHA AS INFORMAÇÕES NECESSÁRIAS</h3>
+              <h4>PREENCHA AS INFORMAÇÕES NECESSÁRIAS</h4>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/contato.png" %}" class="img-fluid">
-              <h3>ENTRAREMOS EM CONTATO COM VOCÊ</h3>
+              <h4>ENTRAREMOS EM CONTATO COM VOCÊ</h4>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/app.png" %}" class="img-fluid">
-              <h3>ATUALIZAREMOS A SUA DISTRIBUIDORA NO APP/USUÁRIO</h3>
+              <h4>ATUALIZAREMOS A SUA DISTRIBUIDORA NO APP/USUÁRIO</h4>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/pedidos.png" %}" class="img-fluid">
-              <h3>JÁ PODE RECEBER SEUS PEDIDOS</h3>
+              <h4>JÁ PODE RECEBER SEUS PEDIDOS</h4>
             </div>
           </div>
         </div>
@@ -339,11 +347,11 @@
         </div>
         <div class="col-md-3 text-left">
           <br><br>
-          <h3><a href="#cover">HOME</a></h3>
-          <h3><a href="#howitworks">COMO FUNCIONA</a></h3>
-          <h3><a href="#distribute">SOU DISTRIBUIDOR</a></h3>
-          <h3><a href="#advantage">VANTAGENS</a></h3>
-          <h3><a href="#contact">CONTATO</a></h3>
+          <h4><a href="#cover">HOME</a></h4>
+          <h4><a href="#howitworks">COMO FUNCIONA</a></h4>
+          <h4><a href="#distribute">SOU DISTRIBUIDOR</a></h4>
+          <h4><a href="#advantage">VANTAGENS</a></h4>
+          <h4><a href="#contact">CONTATO</a></h4>
         </div>
         <div class="col-md-3 text-right">
           <div class="row">
