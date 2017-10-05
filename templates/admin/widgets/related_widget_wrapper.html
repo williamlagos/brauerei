@@ -1,6 +1,10 @@
 {% load i18n static %}
-<div class="related-widget-wrapper">
+<div class="related-widget-wrapper col-sm-9">
+    <div class="row">
     {{ rendered_widget }}
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
     {% block links %}
         {% spaceless %}
         {% if can_change_related %}
@@ -26,4 +30,6 @@
         {% endif %}
         {% endspaceless %}
     {% endblock %}
+      </div>
+    </div>
 </div>

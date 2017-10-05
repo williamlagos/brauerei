@@ -25,15 +25,16 @@
 {% block content %}<div id="content-main" class="container-fluid">
 {% block object-tools %}
 {% if change %}{% if not is_popup %}
-  <ul class="object-tools">
+  <ul class="object-tools nav nav-tabs nav-fill">
     {% block object-tools-items %}
-    <li>
+    <li class="nav-item">
         {% url opts|admin_urlname:'history' original.pk|admin_urlquote as history_url %}
-        <a href="{% add_preserved_filters history_url %}" class="historylink">{% trans "History" %}</a>
+        <a href="{% add_preserved_filters history_url %}" class="historylink nav-link">{% trans "History" %}</a>
     </li>
-    {% if has_absolute_url %}<li><a href="{{ absolute_url }}" class="viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
+    {% if has_absolute_url %}<li class="nav-item"><a href="{{ absolute_url }}" class="nav-link viewsitelink">{% trans "View on site" %}</a></li>{% endif %}
     {% endblock %}
   </ul>
+  <br>
 {% endif %}{% endif %}
 {% endblock %}
 <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}

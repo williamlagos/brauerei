@@ -1,3 +1,7 @@
+#selector {
+  background:red;
+}
+
 a, a:hover {
   text-decoration: none;
   color: black;
