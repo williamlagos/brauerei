@@ -25,7 +25,7 @@
       height: 100% !important;
       font-family: 'Gotham'
     }
-    h1,h2,h3,a,label { font-family: 'Gotham Black'; }
+    h1,h2,h3,h4,h5,a,label { font-family: 'Gotham Black'; letter-spacing:2pt; line-height: 1.4em; }
     h1 {
       margin-top:2.5em;
       margin-bottom:2.5em;
@@ -88,7 +88,7 @@
       font-size:1.5em;
     }
     .btn-vupit-inverse, .btn-vupit-inverse:hover {
-      padding:.5em 1em;
+      padding:.5em 3em;
       margin-top:2em;
       margin-bottom:2em;
       border: 4px solid #5d4582;
@@ -119,6 +119,9 @@
     h3 a, h3 a:hover, a:hover {
       text-decoration: none;
       color:white;
+    }
+    #footer h3 {
+      margin: 1em 0em;
     }
     @media (max-width: 576px) {
       h3 {
@@ -151,7 +154,7 @@
           <div class="row text-right">
             <div class="col-md-4 ml-auto">
               <div class="row">
-              <div class="col-md-3 ml-auto">
+              <div class="col-md-3 p-0 ml-auto">
                 <a href="https://www.facebook.com/VupitApp/">
                   <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
                 </a>
@@ -204,16 +207,16 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-md-4">
-            <img src="{% static "img/gps.png" %}" width="75%" class="img-fluid"/>
-            <h3>USE O SEU GPS: <br> SELECIONE SEU <br> ENDEREÇO</h3>
+            <img src="{% static "img/gps.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+            <h3>USE O SEU GPS: SELECIONE SEU ENDEREÇO</h3>
           </div>
           <div class="col-md-4">
-            <img src="{% static "img/mapa.png" %}" width="75%" class="img-fluid"/>
-            <h3>ESCOLHA UM <br> DISTRIBUIDOR</h3>
+            <img src="{% static "img/mapa.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+            <h3>ESCOLHA UM DISTRIBUIDOR</h3>
           </div>
           <div class="col-md-4">
-            <img src="{% static "img/bebidas.png" %}" width="75%" class="img-fluid"/>
-            <h3>RECEBA ONDE ESTIVER: <br> NA SUA CASA <br> NO CERIMONIAL <br> OU NO SEU BAR</h3>
+            <img src="{% static "img/bebidas.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+            <h3>RECEBA ONDE ESTIVER: NA SUA CASA NO CERIMONIAL OU NO SEU BAR</h3>
           </div>
         </div>
       </div>
@@ -231,27 +234,27 @@
           <div class="col">
             <img src="{% static "img/dinheiro.png" %}" class="img-fluid"/>
             <h3>ECONOMIA</h3>
-            <p>Escolha a distribuidora <br>com menor preço <br>mais perto de você.</p>
+            <p>Escolha a distribuidora com menor preço mais perto de você.</p>
           </div>
           <div class="col">
             <img src="{% static "img/moto.png" %}" class="img-fluid"/>
             <h3>PRATICIDADE</h3>
-            <p>Agilidade e eficiência <br>com um excelente <br>atendimento na entrega.</p>
+            <p>Agilidade e eficiência com um excelente atendimento na entrega.</p>
           </div>
           <div class="col">
             <img src="{% static "img/relogio.png" %}" class="img-fluid"/>
             <h3>DISPONIBILIDADE</h3>
-            <p>Todos os dias <br>a qualquer hora. <br> 24 horas.</p>
+            <p>Todos os dias a qualquer hora. 24 horas.</p>
           </div>
           <div class="col">
             <img src="{% static "img/celular.png" %}" class="img-fluid"/>
             <h3>MOBILIDADE</h3>
-            <p>Peça onde você estiver <br>e receba em qualquer <br>lugar que desejar.</p>
+            <p>Peça onde você estiver e receba em qualquer lugar que desejar.</p>
           </div>
           <div class="col">
             <img src="{% static "img/seguranca.png" %}" class="img-fluid"/>
             <h3>SEGURANÇA</h3>
-            <p>Respeito total <br>a sua privacidade <br>e seus dados.</p>
+            <p>Respeito total a sua privacidade e seus dados.</p>
           </div>
         </div>
       </div>
@@ -269,19 +272,19 @@
           <div class="row">
             <div class="col-6 col-md-3">
               <img src="{% static "img/preencha.png" %}" class="img-fluid">
-              <h3>PREENCHA <br> AS INFORMAÇÕES<br> NECESSÁRIAS</h3>
+              <h3>PREENCHA AS INFORMAÇÕES NECESSÁRIAS</h3>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/contato.png" %}" class="img-fluid">
-              <h3>ENTRAREMOS <br> EM CONTATO<br> COM VOCÊ</h3>
+              <h3>ENTRAREMOS EM CONTATO COM VOCÊ</h3>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/app.png" %}" class="img-fluid">
-              <h3>ATUALIZAREMOS A <br> SUA DISTRIBUIDORA<br> NO APP/USUÁRIO</h3>
+              <h3>ATUALIZAREMOS A SUA DISTRIBUIDORA NO APP/USUÁRIO</h3>
             </div>
             <div class="col-6 col-md-3">
               <img src="{% static "img/pedidos.png" %}" class="img-fluid">
-              <h3>JÁ PODE <br> RECEBER<br> SEUS PEDIDOS</h3>
+              <h3>JÁ PODE RECEBER SEUS PEDIDOS</h3>
             </div>
           </div>
         </div>
@@ -297,12 +300,12 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h1 style="margin-bottom:0em;">CONTATO</h1>
-          <h3 style="margin-top:1em; color:gray">Escreva aqui seu comentário, elogio, crítica ou sugestão.</h3>
+          <h5 style="font-size:1em; letter-spacing:1pt; margin-top:1em; color:gray">Escreva aqui seu comentário, elogio, crítica ou sugestão.</h3>
         </div>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-md-9 ml-auto mr-auto">
+          <div class="col-md-6 ml-auto mr-auto">
             <form action="#">
               <div class="row">
                 <div class="col">
@@ -317,7 +320,7 @@
               <div class="row">
                 <div class="col">
                   <label for="inputMessage1">MENSAGEM</label>
-                  <textarea class="vupit-form-control" id="inputMessage1"></textarea>
+                  <textarea rows="5" class="vupit-form-control" id="inputMessage1"></textarea>
                 </div>
               </div>
               <div class="row text-center">
@@ -335,7 +338,7 @@
       <br><br>
       <div class="row">
         <div class="col-md-5 text-center">
-          <br><br><br><br><br>
+          <br><br><br><br><br><br>
           <div class="row">
             <div class="col-md-9 ml-auto mr-auto">
               <img src="{% static "img/vupit_footer.png" %}" class="img-fluid"/>
@@ -343,7 +346,7 @@
           </div>
         </div>
         <div class="col-md-3 text-left">
-          <br>
+          <br><br>
           <h3><a href="#cover">HOME</a></h3>
           <h3><a href="#howitworks">COMO FUNCIONA</a></h3>
           <h3><a href="#distribute">SOU DISTRIBUIDOR</a></h3>
@@ -353,9 +356,9 @@
         <div class="col-md-4 text-right">
           <div class="row">
             <div class="col-md-9 ml-auto mr-auto">
-              <br><br>
+              <br><br><br>
               <div class="row">
-                <div class="col-md-3 ml-auto">
+                <div class="col-md-3 p-0 ml-auto">
                   <a href="https://www.facebook.com/VupitApp/">
                     <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
                   </a>
@@ -366,7 +369,7 @@
                   </a>
                 </div>
               </div>
-              <br><br><br><br><br>
+              <br><br><br>
               <div class="row">
                 <div class="col-md-12">
                   <br>
