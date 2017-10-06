@@ -17,7 +17,7 @@
                         {% if field.is_readonly %}
                             <div class="form-control-plaintext readonly">{{ field.contents }}</div>
                         {% else %}
-                            {{ field.field|add_class:"col-sm-9 form-control" }}
+                            <div class="col-sm-9"> {{ field.field|add_class:"form-control" }}</div>
                         {% endif %}
                     {% endif %}
                     {% if field.field.help_text %}
