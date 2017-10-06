@@ -307,21 +307,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
-            <form action="#">
+            <form action="send/" method="POST">
+              {% csrf_token %}
               <div class="row">
                 <div class="col">
                   <label for="inputName1">NOME</label>
-                  <input style="font-size:1em" type="name" class="form-control vupit-form-control" id="inputName1">
+                  <input name="name" style="font-size:1em" type="name" class="form-control vupit-form-control" id="inputName1">
                 </div>
                 <div class="col">
                   <label for="inputEmail1">E-MAIL</label>
-                  <input style="font-size:1em" type="email" class="form-control vupit-form-control" id="inputEmail1">
+                  <input name="email" style="font-size:1em" type="email" class="form-control vupit-form-control" id="inputEmail1">
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <label for="inputMessage1">MENSAGEM</label>
-                  <textarea style="font-size:1em" rows="7" class="vupit-form-control" id="inputMessage1"></textarea>
+                  <textarea name="text" style="font-size:1em" rows="7" class="vupit-form-control" id="inputMessage1"></textarea>
                 </div>
               </div>
               <div class="row text-center">
