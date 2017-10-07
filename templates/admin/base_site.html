@@ -3,7 +3,7 @@
 
 {% block title %}{{ title }}{% endblock %}
 
-{% block branding %}Vupit Dashboard{% endblock %}
+{% block branding %}{{ site_header|default:_('Django administration') }}{% endblock %}
 
 {% block nav-global %}{% endblock %}
 

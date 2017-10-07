@@ -72,7 +72,7 @@
         {% endif %}
       {% endblock %}
 
-      <form id="changelist-form" class="col-md-9" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
+      <form id="changelist-form" class="col" method="post"{% if cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
       {% if cl.formset %}
         <div>{{ cl.formset.management_form }}</div>
       {% endif %}
