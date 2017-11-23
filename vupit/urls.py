@@ -22,6 +22,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^register/', TemplateView.as_view(template_name="form.html")),
     url(r'^send/', send),
     url(r'^api/', include('engine.urls')),
     url(r'^dashboard/', admin.site.urls),

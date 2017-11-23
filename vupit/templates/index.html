@@ -1,166 +1,221 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Vupit App</title>
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="{% static "img/vupit.png" %}" class="img-fluid"/></a>
+  <button class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <!-- Bootstrap -->
-    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="{% static "css/style.css" %}" rel="stylesheet">
-    <link href="{% static "img/logo.png" %}" rel="shortcut icon"/>
-
-    <style>
-    @font-face {
-      font-family: 'Gotham';
-      src: url("{% static "ttf/GOTHAM-LIGHT_0.TTF" %}");
-    }
-    @font-face {
-      font-family: 'Gotham Black';
-      src: url("{% static "ttf/GOTHAM-BOLD_0.TTF" %}");
-    }
-    body, html {
-      height: 100% !important;
-      font-family: 'Gotham'
-    }
-    h1,h2,h3,h4,h5,a,label,button { font-family: 'Gotham Black'; letter-spacing:2pt; line-height: 1.4em; }
-    h1 {
-      margin-top:2.5em;
-      margin-bottom:2.5em;
-      font-size:2em;
-    }
-    h2 {
-      margin-top:-1em;
-      font-size:1.7em;
-    }
-    h3 {
-      margin-top:1.5em;
-      margin-bottom:1.5em;
-      font-size:1.3em;
-    }
-    h4 {
-      margin-top:1.5em;
-      margin-bottom:1.5em;
-      font-size:1.1em;
-    }
-    label {
-      margin-top:1em;
-    }
-    .bg {
-      /* The image used */
-      background-image: url("{% static "img/friends.jpg" %}");
-
-      /* Full height */
-      height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    .item {
-      text-align: center;
-      align-items: center;
-      width:100%;
-    }
-    .purple {
-      background: #5d4582;
-      color: #ffffff;
-    }
-    .yellow {
-      background: #ffda00;
-      color: #5d4582;
-    }
-    .white {
-      background: #ffffff;
-      color: #5d4582;
-    }
-    .btn-vupit, .btn-vupit:hover {
-      padding:.5em 1em;
-      margin-top:2em;
-      margin-bottom:2em;
-      border: 4px solid #ffda00;
-      border-radius: 0px;
-      background: #5d4582;
-      color: #ffda00;
-      font-size:1.5em;
-    }
-    .btn-vupit-inverse, .btn-vupit-inverse:hover {
-      padding:.5em 3em;
-      margin-top:2em;
-      margin-bottom:2em;
-      border: 4px solid #5d4582;
-      border-radius: 0px;
-      background: #ffffff;
-      color: #5d4582;
-      font-size:1.5em;
-    }
-    .vupit-form-control, .vupit-form-control:hover {
-      width:100%;
-      border: 4px solid #5d4582;
-      border-radius: 0px;
-      background: #ffffff;
-      color: #5d4582;
-      font-size:1.5em;
-    }
-    .navbar {
-      background-color: rgba(0,0,0,0.7);
-    }
-    .nav-link {
-      color:white !important;
-    }
-    .cover {
-      display:flex;
-      align-items: center;
-      background: rgba(0,0,0,0.7);
-      height:100%;
-      width:100%;
-    }
-    h4 a, h4 a:hover, a:hover {
-      text-decoration: none;
-      color:white;
-    }
-    #footer h4 {
-      margin: 1em 0em;
-    }
-    @media (max-width: 576px) {
-      .bg {
-        background-size:auto;
-      }
-      h3 {
-        font-size:8pt;
-        line-height:12pt;
-      }
-      p {
-        font-size:7pt;
-        line-height:10pt;
-      }
-    }
-    </style>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body class="bg">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="#"><img src="{% static "img/vupit.png" %}" class="img-fluid"/></a>
-      <button class="navbar-toggler btn-block" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="container">
-          <div class="row text-right">
-            <div class="col-md-1 ml-auto">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="container">
+      <div class="row text-right">
+        <div class="col-md-1 ml-auto">
+          <div class="row">
+            <div class="col-md-6 p-0">
+              <a href="https://www.facebook.com/VupitApp/">
+                <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
+              </a>
+            </div>
+            <div class="col-md-6 p-0">
+              <a href="https://www.instagram.com/">
+                <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#howitworks">COMO FUNCIONA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#advantage">VANTAGENS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#distribute">SOU DISTRIBUIDOR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTATO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<div id="cover" class="cover">
+  <!--<div id="message" class="col-md-3">
+    <h1 style="color:white; line-height:1.5em; margin-bottom:1em">Toda hora é uma boa hora para diversão.</h1>
+    <h4 style="color:white;">Baixe o app</h4>
+  </div>-->
+</div>
+<div id="howitworks" class="purple container-fluid">
+  <br>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h1>COMO FUNCIONA?</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="{% static "img/gps.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+        <h4>USE O SEU GPS: SELECIONE SEU ENDEREÇO</h4>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static "img/mapa.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+        <h4>ESCOLHA UM DISTRIBUIDOR</h4>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static "img/bebidas.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
+        <h4>RECEBA ONDE ESTIVER: NA SUA CASA NO CERIMONIAL OU NO SEU BAR</h4>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>
+<div id="advantage" class="yellow container-fluid">
+  <br><br>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h1>VANTAGENS</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <img src="{% static "img/dinheiro.png" %}" class="img-fluid"/>
+        <h3>ECONOMIA</h3>
+        <p>Escolha a distribuidora com menor preço mais perto de você.</p>
+      </div>
+      <div class="col">
+        <img src="{% static "img/moto.png" %}" class="img-fluid"/>
+        <h3>PRATICIDADE</h3>
+        <p>Agilidade e eficiência com um excelente atendimento na entrega.</p>
+      </div>
+      <div class="col">
+        <img src="{% static "img/relogio.png" %}" class="img-fluid"/>
+        <h3>DISPONIBILIDADE</h3>
+        <p>Todos os dias a qualquer hora. 24 horas.</p>
+      </div>
+      <div class="col">
+        <img src="{% static "img/celular.png" %}" class="img-fluid"/>
+        <h3>MOBILIDADE</h3>
+        <p>Peça onde você estiver e receba em qualquer lugar que desejar.</p>
+      </div>
+      <div class="col">
+        <img src="{% static "img/seguranca.png" %}" class="img-fluid"/>
+        <h3>SEGURANÇA</h3>
+        <p>Respeito total a sua privacidade e seus dados.</p>
+      </div>
+    </div>
+  </div>
+  <br><br><br><br><br><br>
+</div>
+<div id="distribute" class="purple container-fluid">
+  <br><br><br><br>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h1>Cadastre sua<br>DISTRIBUIDORA</h1>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-9 ml-auto mr-auto">
+      <div class="row">
+        <div class="col-6 col-md-3">
+          <img src="{% static "img/preencha.png" %}" class="img-fluid">
+          <h4>PREENCHA AS INFORMAÇÕES NECESSÁRIAS</h4>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="{% static "img/contato.png" %}" class="img-fluid">
+          <h4>ENTRAREMOS EM CONTATO COM VOCÊ</h4>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="{% static "img/app.png" %}" class="img-fluid">
+          <h4>ATUALIZAREMOS A SUA DISTRIBUIDORA NO APP/USUÁRIO</h4>
+        </div>
+        <div class="col-6 col-md-3">
+          <img src="{% static "img/pedidos.png" %}" class="img-fluid">
+          <h4>JÁ PODE RECEBER SEUS PEDIDOS</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <button class="btn-vupit">Cadastre-se em breve.</button>
+    </div>
+  </div>
+  <br><br><br><br>
+</div>
+<div id="contact" class="white container-fluid">
+  <div class="row text-center">
+    <div class="col-md-12">
+      <h1 style="margin-bottom:0em;">CONTATO</h1>
+      <h5 style="font-size:1em; letter-spacing:1pt; margin-top:1em; color:gray">Escreva aqui seu comentário, elogio, crítica ou sugestão.</h3>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto">
+        <form action="send/" method="POST" onSubmit="alert('Obrigado pelo seu feedback.');">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col">
+              <label for="inputName1">NOME</label>
+              <input name="name" style="font-size:1em" type="name" class="form-control vupit-form-control" id="inputName1">
+            </div>
+            <div class="col">
+              <label for="inputEmail1">E-MAIL</label>
+              <input name="email" style="font-size:1em" type="email" class="form-control vupit-form-control" id="inputEmail1">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="inputMessage1">MENSAGEM</label>
+              <textarea name="text" style="font-size:1em" rows="7" class="vupit-form-control" id="inputMessage1"></textarea>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col">
+              <button type="submit" class="btn-vupit-inverse">Enviar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br><br>
+</div>
+<div id="footer" class="purple container-fluid">
+  <br><br>
+  <div class="row">
+    <div class="col-md-5 text-center">
+      <br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-md-9 ml-auto mr-auto">
+          <img src="{% static "img/vupit_footer.png" %}" class="img-fluid"/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 text-left">
+      <br><br>
+      <h4><a href="#cover">HOME</a></h4>
+      <h4><a href="#howitworks">COMO FUNCIONA</a></h4>
+      <h4><a href="#distribute">SOU DISTRIBUIDOR</a></h4>
+      <h4><a href="#advantage">VANTAGENS</a></h4>
+      <h4><a href="#contact">CONTATO</a></h4>
+    </div>
+    <div class="col-md-3 text-right">
+      <div class="row">
+        <div class="col-md-9 ml-auto mr-auto">
+          <br><br><br><br><br>
+          <div class="row">
+            <div class="col-md-4 ml-auto">
               <div class="row">
-                <div class="col-md-6 p-0">
+                <div class="col-md-6 p-0 ml-auto">
                   <a href="https://www.facebook.com/VupitApp/">
                     <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
                   </a>
@@ -173,226 +228,17 @@
               </div>
             </div>
           </div>
-          <br>
+          <br><br><br>
           <div class="row">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#howitworks">COMO FUNCIONA</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#advantage">VANTAGENS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#distribute">SOU DISTRIBUIDOR</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">CONTATO</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div id="cover" class="cover">
-      <!--<div id="message" class="col-md-3">
-        <h1 style="color:white; line-height:1.5em; margin-bottom:1em">Toda hora é uma boa hora para diversão.</h1>
-        <h4 style="color:white;">Baixe o app</h4>
-      </div>-->
-    </div>
-    <div id="howitworks" class="purple container-fluid">
-      <br>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h1>COMO FUNCIONA?</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <img src="{% static "img/gps.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h4>USE O SEU GPS: SELECIONE SEU ENDEREÇO</h4>
-          </div>
-          <div class="col-md-4">
-            <img src="{% static "img/mapa.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h4>ESCOLHA UM DISTRIBUIDOR</h4>
-          </div>
-          <div class="col-md-4">
-            <img src="{% static "img/bebidas.png" %}" width="75%" style="margin-bottom:1em" class="img-fluid"/>
-            <h4>RECEBA ONDE ESTIVER: NA SUA CASA NO CERIMONIAL OU NO SEU BAR</h4>
-          </div>
-        </div>
-      </div>
-      <br><br><br><br>
-    </div>
-    <div id="advantage" class="yellow container-fluid">
-      <br><br>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h1>VANTAGENS</h1>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <img src="{% static "img/dinheiro.png" %}" class="img-fluid"/>
-            <h3>ECONOMIA</h3>
-            <p>Escolha a distribuidora com menor preço mais perto de você.</p>
-          </div>
-          <div class="col">
-            <img src="{% static "img/moto.png" %}" class="img-fluid"/>
-            <h3>PRATICIDADE</h3>
-            <p>Agilidade e eficiência com um excelente atendimento na entrega.</p>
-          </div>
-          <div class="col">
-            <img src="{% static "img/relogio.png" %}" class="img-fluid"/>
-            <h3>DISPONIBILIDADE</h3>
-            <p>Todos os dias a qualquer hora. 24 horas.</p>
-          </div>
-          <div class="col">
-            <img src="{% static "img/celular.png" %}" class="img-fluid"/>
-            <h3>MOBILIDADE</h3>
-            <p>Peça onde você estiver e receba em qualquer lugar que desejar.</p>
-          </div>
-          <div class="col">
-            <img src="{% static "img/seguranca.png" %}" class="img-fluid"/>
-            <h3>SEGURANÇA</h3>
-            <p>Respeito total a sua privacidade e seus dados.</p>
-          </div>
-        </div>
-      </div>
-      <br><br><br><br><br><br>
-    </div>
-    <div id="distribute" class="purple container-fluid">
-      <br><br><br><br>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h1>Cadastre sua<br>DISTRIBUIDORA</h1>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-9 ml-auto mr-auto">
-          <div class="row">
-            <div class="col-6 col-md-3">
-              <img src="{% static "img/preencha.png" %}" class="img-fluid">
-              <h4>PREENCHA AS INFORMAÇÕES NECESSÁRIAS</h4>
-            </div>
-            <div class="col-6 col-md-3">
-              <img src="{% static "img/contato.png" %}" class="img-fluid">
-              <h4>ENTRAREMOS EM CONTATO COM VOCÊ</h4>
-            </div>
-            <div class="col-6 col-md-3">
-              <img src="{% static "img/app.png" %}" class="img-fluid">
-              <h4>ATUALIZAREMOS A SUA DISTRIBUIDORA NO APP/USUÁRIO</h4>
-            </div>
-            <div class="col-6 col-md-3">
-              <img src="{% static "img/pedidos.png" %}" class="img-fluid">
-              <h4>JÁ PODE RECEBER SEUS PEDIDOS</h4>
+            <div class="col-md-12">
+              <br>
+              <p>©2017 Vupit </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <button class="btn-vupit">Cadastre-se em breve.</button>
-        </div>
-      </div>
-      <br><br><br><br>
     </div>
-    <div id="contact" class="white container-fluid">
-      <div class="row text-center">
-        <div class="col-md-12">
-          <h1 style="margin-bottom:0em;">CONTATO</h1>
-          <h5 style="font-size:1em; letter-spacing:1pt; margin-top:1em; color:gray">Escreva aqui seu comentário, elogio, crítica ou sugestão.</h3>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 ml-auto mr-auto">
-            <form action="send/" method="POST" onSubmit="alert('Obrigado pelo seu feedback.');">
-              {% csrf_token %}
-              <div class="row">
-                <div class="col">
-                  <label for="inputName1">NOME</label>
-                  <input name="name" style="font-size:1em" type="name" class="form-control vupit-form-control" id="inputName1">
-                </div>
-                <div class="col">
-                  <label for="inputEmail1">E-MAIL</label>
-                  <input name="email" style="font-size:1em" type="email" class="form-control vupit-form-control" id="inputEmail1">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <label for="inputMessage1">MENSAGEM</label>
-                  <textarea name="text" style="font-size:1em" rows="7" class="vupit-form-control" id="inputMessage1"></textarea>
-                </div>
-              </div>
-              <div class="row text-center">
-                <div class="col">
-                  <button type="submit" class="btn-vupit-inverse">Enviar</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <br><br>
-    </div>
-    <div id="footer" class="purple container-fluid">
-      <br><br>
-      <div class="row">
-        <div class="col-md-5 text-center">
-          <br><br><br><br><br><br>
-          <div class="row">
-            <div class="col-md-9 ml-auto mr-auto">
-              <img src="{% static "img/vupit_footer.png" %}" class="img-fluid"/>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 text-left">
-          <br><br>
-          <h4><a href="#cover">HOME</a></h4>
-          <h4><a href="#howitworks">COMO FUNCIONA</a></h4>
-          <h4><a href="#distribute">SOU DISTRIBUIDOR</a></h4>
-          <h4><a href="#advantage">VANTAGENS</a></h4>
-          <h4><a href="#contact">CONTATO</a></h4>
-        </div>
-        <div class="col-md-3 text-right">
-          <div class="row">
-            <div class="col-md-9 ml-auto mr-auto">
-              <br><br><br><br><br>
-              <div class="row">
-                <div class="col-md-4 ml-auto">
-                  <div class="row">
-                    <div class="col-md-6 p-0 ml-auto">
-                      <a href="https://www.facebook.com/VupitApp/">
-                        <img src="{% static "img/facebook.png" %}" class="img-fluid"/>
-                      </a>
-                    </div>
-                    <div class="col-md-6 p-0">
-                      <a href="https://www.instagram.com/">
-                        <img src="{% static "img/instagram.png" %}" class="img-fluid"/>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <br><br><br>
-              <div class="row">
-                <div class="col-md-12">
-                  <br>
-                  <p>©2017 Vupit </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br>
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
-  </body>
-</html>
+  </div>
+  <br><br>
+</div>
+{% endblock %}
