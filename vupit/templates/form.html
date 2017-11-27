@@ -1,4 +1,92 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- <h1>Hello World!</h1> -->
+<div style="background:white;">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 style="color:#5d4582; margin:5px; margin-top:30px">PREENCHA O FORMULÁRIO E TORNE-SE NOSSO PARCEIRO</h1>
+        <h2 style="font-family:Gotham; font-size:1.5em; margin:5px">VOCÊ ESTÁ UM PASSO DE AUMENTAR AS SUAS VENDAS COM O VUPIT APP</h2>
+      </div>
+    </div>
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <h3 style="color:#5d4582">Dados do seu estabelecimento</h3>
+          <input class="vupit-form-control" placeholder="Nome do seu estabelecimento"/>
+          <input class="vupit-form-control" placeholder="Telefone (apenas números)"/>
+          <input class="vupit-form-control" placeholder="CNPJ (apenas números)"/>
+          <select class="vupit-form-control" style="padding:9px 0px">
+            <option value="" disabled selected>Tipo de negócio (bar, distribuidora, restaurante...)</option>
+            <option value="0">Bar</option>
+            <option value="1">Distribuidora</option>
+            <option value="2">Restaurante</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <h3 style="color:#5d4582">Endereço do seu estabelecimento</h3>
+          <div class="form-row">
+            <div class="col"><input class="vupit-form-control" placeholder="CEP (apenas números)"></div>
+            <div class="col"><input class="vupit-form-control" placeholder="Estado"></div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <select class="vupit-form-control" style="padding:9px 0px">
+                <option value="" disabled selected>Cidade</option>
+                <option value="0">Porto Alegre</option>
+              </select>
+            </div>
+            <div class="col"><input class="vupit-form-control" placeholder="Bairro"></div>
+          </div>
+          <div class="form-row">
+            <div class="col-8">
+              <input class="vupit-form-control" placeholder="Endereço">
+            </div>
+            <div class="col-4">
+              <input class="vupit-form-control" placeholder="Número">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col"><input class="vupit-form-control" placeholder="Complemento"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div style="margin-top:1.4em; margin-bottom:1.4em;">
+            <h3 style="color:#5d4582; display:inline; margin-right:5px">Já fez entrega?</h3>&nbsp;
+            <label style="font-family:Gotham"><input type="radio" value="1"> Sim </label>&nbsp;
+            <label style="font-family:Gotham"><input type="radio" value="0"> Não </label>
+          </div>
+          <select class="vupit-form-control" style="padding:9px 0px">
+            <option value="" disabled selected>Há quanto tempo faz tele-entrega?</option>
+            <option value="0">1 ano</option>
+          </select>
+          <input class="vupit-form-control" placeholder="Quantas tele-entregas por mês em média?">
+          <input class="vupit-form-control" placeholder="Quantidade de entregadores?">
+          <input class="vupit-form-control" placeholder="Horário de funcionamento: 00:00 às 23:59">
+        </div>
+        <div class="col-md-6">
+          <h3 style="color:#5d4582">Contato do representante legal</h3>
+          <div class="form-row">
+            <div class="col"><input class="vupit-form-control" placeholder="Nome do responsável"></div>
+            <div class="col"><input class="vupit-form-control" placeholder="Sobrenome"></div>
+          </div>
+          <input class="vupit-form-control" placeholder="E-mail do responsável">
+          <input class="vupit-form-control" placeholder="Telefone do responsável (apenas números)">
+          <input class="vupit-form-control" placeholder="Como você conheceu a Vupit?">
+        </div>
+      </div>
+      <div class="row text-center" style="margin-top:2em">
+        <div class="col-12">
+          <input type="submit" class="btn btn-default btn-vupit-white" value="Enviar cadastro">
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-12">
+          <h4 style="color:#5d4582">Obrigado, em breve entraremos em contato.</h4>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 {% endblock %}
