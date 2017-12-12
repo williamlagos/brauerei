@@ -1,6 +1,8 @@
 from django.contrib import admin
-from engine.models import *
+from brew.models import *
 
+admin.site.site_header = "Vupit Dashboard"
+admin.site.register(Message)
 admin.site.register(Profile)
 admin.site.register(Product)
 admin.site.register(Stock)

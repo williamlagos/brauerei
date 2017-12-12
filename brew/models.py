@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+class Message(models.Model):
+    name = models.CharField(max_length=128)
+    email = models.EmailField()
+    text = models.TextField()
+
 class Profile(models.Model):
     user = models.OneToOneField(User)
     photo = models.ImageField()

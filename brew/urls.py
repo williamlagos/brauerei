@@ -16,14 +16,24 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
-from vupit.views import *
+from rest_framework import routers
+from brew.views import *
 
 admin.autodiscover()
+
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+router.register(r'groups', GroupViewSet)
+
+# Wire up our API using automatic URL routing.
+# Additionally, we include login URLs for the browsable API.
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="index.html")),
     url(r'^register/', TemplateView.as_view(template_name="form.html")),
     url(r'^send/', send),
-    url(r'^api/', include('engine.urls')),
+    url(r'^api/', include(router.urls)),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url(r'^api/', include('engine.urls')),
     url(r'^dashboard/', admin.site.urls),
 ]
