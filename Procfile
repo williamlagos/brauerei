@@ -1,1 +1,1 @@
-web: gunicorn vupit.wsgi --log-file -
+web: gunicorn brew.wsgi --log-file -
