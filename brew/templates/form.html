@@ -33,6 +33,20 @@
               <select class="vupit-form-control" style="padding:9px 0px">
                 <option value="" disabled selected>Cidade</option>
                 <option value="0">Porto Alegre</option>
+                <option value="1">Viamão</option>
+                <option value="2">Sapucaia</option>
+                <option value="3">Sapiranga</option>
+                <option value="4">São Leopoldo</option>
+                <option value="5">Novo Hamburgo</option>
+                <option value="6">Guaíba</option>
+                <option value="7">Gravataí</option>
+                <option value="8">Esteio</option>
+                <option value="9">Canoas</option>
+                <option value="10">Campo Bom</option>
+                <option value="11">Alvorada</option>
+                <option value="12">Cachoeirinha</option>
+                <option value="13">Santa Maria</option>
+                <option value="14">Montenegro</option>
               </select>
             </div>
             <div class="col"><input class="vupit-form-control" placeholder="Bairro"></div>
@@ -53,13 +67,17 @@
       <div class="row">
         <div class="col-md-6">
           <div style="margin-top:1.4em; margin-bottom:1.4em;">
-            <h3 style="color:#5d4582; display:inline; margin-right:5px">Já fez entrega?</h3>&nbsp;
-            <label style="font-family:Gotham"><input type="radio" value="1"> Sim </label>&nbsp;
-            <label style="font-family:Gotham"><input type="radio" value="0"> Não </label>
+            <h3 style="color:#5d4582; display:inline; margin-right:5px">Já faz entrega?</h3>&nbsp;
+            <label style="font-family:Gotham"><input name="choice" type="radio" value="1"> Sim </label>&nbsp;
+            <label style="font-family:Gotham"><input name="choice" type="radio" value="0"> Não </label>
           </div>
           <select class="vupit-form-control" style="padding:9px 0px">
             <option value="" disabled selected>Há quanto tempo faz tele-entrega?</option>
-            <option value="0">1 ano</option>
+            <option value="0">0 - 5 meses</option>
+            <option value="1">6 meses - 1 ano</option>
+            <option value="2">2 anos - 3 anos</option>
+            <option value="3">4 anos - 5 anos</option>
+            <option value="4">Mais de 5 anos</option>
           </select>
           <input class="vupit-form-control" placeholder="Quantas tele-entregas por mês em média?">
           <input class="vupit-form-control" placeholder="Quantidade de entregadores?">
