@@ -26,7 +26,7 @@ class Stock(models.Model):
     quantity = models.IntegerField()
 
 class Request(models.Model):
-    client = models.ForeignKey(User)
-    # provider = models.ForeignKey(User)
+    client = models.ForeignKey(User, null=True, related_name="client")
+    provider = models.ForeignKey(User, null=True, related_name="provider")
     products = models.ManyToManyField(Product)
     estimated = models.DateTimeField()
