@@ -39,4 +39,4 @@ class RequestSerializer(serializers.HyperlinkedModelSerializer):
     products = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), many=True, read_only=False)
     class Meta:
         model = Request
-        fields = ('provider', 'products', 'estimated')
+        fields = ('id', 'provider', 'products', 'estimated')
