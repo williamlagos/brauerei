@@ -8,6 +8,9 @@ class Message(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
+    name = models.CharField(default="",max_length=128)
+    description = models.TextField(default="")
+    address = models.TextField(default="")
     photo = models.ImageField()
     phone = models.CharField(max_length=64)
     side = models.IntegerField()
