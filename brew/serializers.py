@@ -25,7 +25,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ('sku', 'name', 'description', 'photo')
+        fields = ('id', 'sku', 'name', 'description', 'photo')
 
 class StockSerializer(serializers.HyperlinkedModelSerializer):
     key = ProductSerializer(many=False, read_only=True)
