@@ -17,6 +17,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     #     view_name='user-detail',
     #     read_only=True
     # )
+    user = UserSerializer(many=False, read_only=True)
     class Meta:
         model = Profile
         fields = ('user', 'lat', 'lon', 'name', 'description', 'address', 'photo', 'phone', 'side', 'rank')
@@ -27,10 +28,7 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ('sku', 'name', 'description', 'photo')
 
 class StockSerializer(serializers.HyperlinkedModelSerializer):
-    key = serializers.HyperlinkedRelatedField(
-        view_name='product-detail',
-        read_only=True
-    )
+    key = ProductSerializer(many=False, read_only=True)
     provider = serializers.HyperlinkedRelatedField(
         view_name='user-detail',
         read_only=True
