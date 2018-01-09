@@ -5,7 +5,7 @@ from brew.models import *
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('id', 'url', 'username', 'email', 'groups')
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
