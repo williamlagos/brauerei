@@ -8,6 +8,8 @@ class Message(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User)
+    lat = models.FloatField(default=0.0)
+    lon = models.FloatField(default=0.0)
     name = models.CharField(default="",max_length=128)
     description = models.TextField(default="")
     address = models.TextField(default="")

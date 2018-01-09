@@ -13,13 +13,13 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = ('url', 'name')
 
 class ProfileSerializer(serializers.ModelSerializer):
-    user = serializers.HyperlinkedRelatedField(
-        view_name='user-detail',
-        read_only=True
-    )
+    # user = serializers.HyperlinkedRelatedField(
+    #     view_name='user-detail',
+    #     read_only=True
+    # )
     class Meta:
         model = Profile
-        fields = ('user', 'name', 'description', 'address', 'photo', 'phone', 'side', 'rank')
+        fields = ('user', 'lat', 'lon', 'name', 'description', 'address', 'photo', 'phone', 'side', 'rank')
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
