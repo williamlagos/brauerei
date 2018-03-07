@@ -32,7 +32,7 @@ class StockSerializer(serializers.HyperlinkedModelSerializer):
     provider = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=False, read_only=False)
     class Meta:
         model = Stock
-        fields = ('key', 'user', 'provider', 'value', 'quantity')
+        fields = ('key', 'provider', 'value', 'quantity')
 
 class RequestSerializer(serializers.HyperlinkedModelSerializer):
     client = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=False, read_only=False)
