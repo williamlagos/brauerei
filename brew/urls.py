@@ -39,7 +39,7 @@ urlpatterns = [
     url(r'^send/', send),
     url(r'^api/', include(router.urls)),
     url(r'^api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/auth/token/', views.obtain_auth_token),
+    url(r'^api/auth/token/', CustomObtainAuthToken.as_view()),
     # url(r'^api/', include('engine.urls')),
     url(r'^dashboard/', admin.site.urls),
 ]
