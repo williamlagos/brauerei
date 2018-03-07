@@ -35,22 +35,21 @@ class StockSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('key', 'provider', 'value', 'quantity')
 
 class RequestSerializer(serializers.HyperlinkedModelSerializer):
-    client = serializers.HyperlinkedRelatedField(
-        queryset=User.objects.all(),
-        view_name='user-detail',
-        read_only=False
-    )
-    provider = serializers.HyperlinkedRelatedField(
-        queryset=User.objects.all(),
-        view_name='user-detail',
-        read_only=False
-    )
-    products = serializers.HyperlinkedRelatedField(
-        queryset=Product.objects.all(),
-        view_name='product-detail',
-        many=True,
-        read_only=False
-    )
+    client = UserSerializer(read_only=True)
+    provider = UserSerializer(read_only=True)
+    products = ProductSerializer(many=True, read_only=True)
+    client_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=False, write_only=True)
+    provider_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=False, write_only=True)
+    request_products = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), many=True, write_only=True)
     class Meta:
         model = Request
-        fields = ('id', 'client', 'provider', 'products', 'estimated')
+        fields = ('id', 'client_id', 'provider_id', 'request_products', 'client', 'provider', 'products', 'estimated')
+        depth = 1
+    def create(self,validated_data):
+        products = validated_data.pop('request_products')
+        validated_data['provider'] = validated_data.pop('provider_id')
+        validated_data['client'] = validated_data.pop('client_id')
+        request = Request.objects.create(**validated_data)
+        request.save()
+        for p in products: request.products.add(p)
+        return request

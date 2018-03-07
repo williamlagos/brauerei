@@ -56,7 +56,7 @@ class Request(models.Model):
         verbose_name_plural = 'Pedidos'
     client = models.ForeignKey(User, null=True, related_name="client", verbose_name='Cliente')
     provider = models.ForeignKey(User, null=True, related_name="provider", verbose_name='Fornecedor')
-    products = models.ManyToManyField(Product, verbose_name='Produtos')
+    products = models.ManyToManyField(Product, related_name="request_products", verbose_name='Produtos')
     estimated = models.DateTimeField(verbose_name='Prazo')
     def __str__(self):
         return 'Pedido de %s' % self.client
