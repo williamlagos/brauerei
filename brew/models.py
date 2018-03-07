@@ -44,7 +44,7 @@ class Stock(models.Model):
         verbose_name = 'Estoque'
         verbose_name_plural = 'Estoques'
     key = models.ForeignKey(Product, verbose_name='Produto')
-    provider = models.ForeignKey(User, verbose_name='Fornecedor')
+    provider = models.ForeignKey(Profile, verbose_name='Fornecedor')
     value = models.FloatField(verbose_name='Valor')
     quantity = models.IntegerField(verbose_name='Quantidade')
     def __str__(self):
