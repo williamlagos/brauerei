@@ -51,5 +51,9 @@ class RequestSerializer(serializers.HyperlinkedModelSerializer):
         validated_data['client'] = validated_data.pop('client_id')
         request = Request.objects.create(**validated_data)
         request.save()
-        for p in products: request.products.add(p)
+        for p in products:
+            s = Stock.objects.get(provider=validated_data['provider'].user,key=p)
+            s.quantity -= 1
+            s.save()
+            request.products.add(p)
         return request
