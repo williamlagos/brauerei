@@ -17,10 +17,15 @@ class ProfileSerializer(serializers.ModelSerializer):
     #     view_name='user-detail',
     #     read_only=True
     # )
-    user = UserSerializer(many=False, read_only=True)
+    user = UserSerializer(many=False, read_only=False)
     class Meta:
         model = Profile
         fields = ('user', 'lat', 'lon', 'name', 'description', 'address', 'photo', 'phone', 'side', 'rank')
+    def create(self, validated_data):
+        user_data = validated_data.pop('user')
+        user = User.objects.create(**user_data)
+        profile = Profile.objects.create(user=user, **validated_data)
+        return profile
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:

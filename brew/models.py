@@ -21,7 +21,7 @@ class Profile(models.Model):
     name = models.CharField(default="",max_length=128, verbose_name='Nome')
     description = models.TextField(default="", verbose_name='Descritivo')
     address = models.TextField(default="", verbose_name='Logradouro')
-    photo = models.ImageField(verbose_name='Foto')
+    photo = models.ImageField(blank=True, verbose_name='Foto')
     phone = models.CharField(max_length=64, verbose_name='Telefone')
     side = models.IntegerField(verbose_name='Tipo')
     rank = models.IntegerField(verbose_name='Grau')
