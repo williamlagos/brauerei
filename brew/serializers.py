@@ -1,11 +1,21 @@
 from django.contrib.auth.models import User, Group
+from django.contrib.auth.hashers import make_password
 from rest_framework import serializers
+from rest_framework.authtoken.models import Token
 from brew.models import *
 
 class UserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
     class Meta:
         model = User
-        fields = ('id', 'url', 'username', 'email', 'groups')
+        fields = ('id', 'url', 'username', 'password', 'email', 'groups')
+    def create(self, validated_data):
+        p = validated_data.pop('password')
+        username = validated_data.pop('username')
+        email = validated_data.pop('email')
+        user = User.objects.create_user(username,email,p)
+        Token.objects.create(user=user)
+        return user
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -23,8 +33,12 @@ class ProfileSerializer(serializers.ModelSerializer):
         fields = ('user', 'lat', 'lon', 'name', 'description', 'address', 'photo', 'phone', 'side', 'rank')
     def create(self, validated_data):
         user_data = validated_data.pop('user')
-        user = User.objects.create(**user_data)
+        password = user_data.pop('password')
+        username = user_data.pop('username')
+        email = user_data.pop('email')
+        user = User.objects.create_user(username,email,password)
         profile = Profile.objects.create(user=user, **validated_data)
+        Token.objects.create(user=user)
         return profile
 
 class ProductSerializer(serializers.ModelSerializer):
