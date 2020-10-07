@@ -4,3 +4,4 @@ env
 *.db
 static
 .DS_Store
+src
