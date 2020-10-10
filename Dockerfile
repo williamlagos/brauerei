@@ -12,10 +12,6 @@ RUN python2 -m pip install -r requirements.txt
 WORKDIR /app
 ADD . /app
 
-# Switching to a non-root user, please refer to https://aka.ms/vscode-docker-python-user-rights
-# RUN useradd appuser && chown -R appuser /app
-# USER appuser
-
 # EXPOSE 8000
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
