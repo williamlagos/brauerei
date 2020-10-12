@@ -21,4 +21,4 @@ class ProfileAdmin(admin.ModelAdmin):
 class MessageAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'text')
 
-admin.site.site_header = "Vupit Dashboard"
+admin.site.site_header = "Delivery Dashboard"

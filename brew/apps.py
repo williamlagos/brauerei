@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
-class VupitAppConfig(AppConfig):
+class DeliveryAppConfig(AppConfig):
     name = 'brew'
-    verbose_name = 'Vupit'
+    verbose_name = 'Delivery'

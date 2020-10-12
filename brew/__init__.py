@@ -1,1 +1,1 @@
-default_app_config = 'brew.apps.VupitAppConfig'
+default_app_config = 'brew.apps.DeliveryAppConfig'
