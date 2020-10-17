@@ -36,7 +36,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         password = user_data.pop('password')
         username = user_data.pop('username')
         email = user_data.pop('email')
-        user = User.objects.create_user(username,email,password)
+        user = User.objects.create_user(username=usernam, email=email, password=password, is_staff=True)
         profile = Profile.objects.create(user=user, **validated_data)
         Token.objects.create(user=user)
         return profile
